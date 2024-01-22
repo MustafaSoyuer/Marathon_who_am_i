@@ -1,0 +1,22 @@
+package com.mustafa.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "tbl_unlukisi")
+public class UnluKisi {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+    @Column( name = "ad_soyad", nullable = false,length = 150 )
+    String adSoyad;
+    String resimURL;
+}
